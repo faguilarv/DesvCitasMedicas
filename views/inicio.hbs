@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="pt-5">
+    <h1 class="text-center">Listado Pacientes</h1>
+  </div>
+  <form class="p-5" method="get" action="/pacientes">
+    <button  type="submit" class="btn btn-info"><i class="fa-light fa-house-medical-circle-check"></i>Crea un usuario al azar</button>
+  </form>
+
+  <div class="text-center bg-primary text-white">
+    <h3>Varones</h3>
+
+  </div>
+  <table class="table table-striped">
+
+    <thead>
+
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Sexo</th>
+        <th scope="col">Fecha</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        {{#each usuarios.[0]}}
+        <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{name}}</td>
+            <td>{{apellido}}</td>
+            <td>{{genero}}</td>
+            <td>{{fecha}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+  </table>
+   <div class="text-center bg-primary text-white">
+        <h3>Mujeres</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each usuarios.[1]}}
+            <tr>
+                <th scope="row">{{id}}</th>
+                <td>{{name}}</td>
+                <td>{{apellido}}</td>
+                <td>{{genero}}</td>
+                <td>{{fecha}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+</div>
